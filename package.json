@@ -1,0 +1,30 @@
+{
+  "name": "@angularid/truffle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "chain": "truffle develop",
+    "deploy:dev": "truffle migrate --network develop",
+    "deploy:kovan": "truffle migrate --network kovan -f 1 --to 1",
+    "deploy:ganache": "truffle migrate --network ganache -f 1 --to 1",
+    "deploy:ganacheCli": "truffle migrate --network ganacheCli -f 1 --to 1",
+    "fork:mainnet": "ganache-cli --account_keys_path=accounts/ganache_cli_mainnet_keys.json --fork https://mainnet.infura.io/v3/b8bdd09e0e3641279406dde31619dda0",
+    "fork:kovan": "ganache-cli --account_keys_path=accounts/ganache_cli_kovan_keys.json --fork https://kovan.infura.io/v3/b8bdd09e0e3641279406dde31619dda0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "solc": "^0.8.11"
+  },
+  "devDependencies": {
+    "truffle-assertions": "^0.9.2"
+  }
+}
